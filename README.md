@@ -6,3 +6,9 @@ Sources :
 http://campus.codeschool.com/courses/shaping-up-with-angular-js/
 
 http://blog.dcube.fr/blog/2014/10/30/dcube-lab-presentation-angularjs-1/
+
+https://angularjs.org/
+
+https://docs.angularjs.org/api
+
+https://books.ninja-squad.com/angularjs#purchase
