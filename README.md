@@ -12,3 +12,8 @@ https://angularjs.org/
 https://docs.angularjs.org/api
 
 https://books.ninja-squad.com/angularjs#purchase
+
+
+Mon billet sur ce mémo :
+
+http://blog.robomatix.net/memo-apprentissage-angularjs-ete
