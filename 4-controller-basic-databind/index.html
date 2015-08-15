@@ -6,12 +6,12 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
-<body data-ng-app="todo.app">
-<h1>Doit afficher le message 'Configuring application...' et 'Application started...' dans la console JS...</h1>
-<div>
-    Test
+<body ng-app="todo.app">
+<div ng-controller="DashboardController">
+    <h1 ng-bind="title"></h1>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 <script src="js/app/app.js"></script>
+<script src="js/app/controllers/dashboardController.js"></script>
 </body>
 </html>
