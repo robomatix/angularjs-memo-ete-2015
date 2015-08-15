@@ -1,7 +1,8 @@
 /**
  * Created by robomatix on 15/08/15.
+ * Copied from https://angularjs.org/
  */
-/** copied from https://angularjs.org/ **/
+
 
 angular.module('todoApp', [])
     .controller('TodoListController', function() {
