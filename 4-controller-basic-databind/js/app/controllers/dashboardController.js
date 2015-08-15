@@ -13,8 +13,8 @@
  *
  */
 
-var controllers = angular.module('todo.controllers', [])
+angular.module('todo.controllers', [])
     .controller('DashboardController', function ($rootScope, $scope) {
-        $scope.title = 'Dashboard from DashboardController New !';
+        $scope.title = 'Dashboard from DashboardController !';
     }
 );

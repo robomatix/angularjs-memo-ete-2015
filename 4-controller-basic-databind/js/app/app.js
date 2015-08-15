@@ -1,16 +1,14 @@
-(function () {
-    'use strict';
+/*
+ * Pas sur que ce soit la meilleure façon d'écrire de fichier, mais ça me plaît !
+ * A voir plus tard...
+ */
 
-    var app = angular.module('todo.app', ['todo.controllers']);
+angular.module('todo.app', ['todo.controllers']).config(appConfig).run(appRun);
 
-    app.config(appConfig);
-    app.run(appRun);
+function appConfig() {
+    console.log('Configuring application...');
+}
 
-    function appConfig() {
-        console.log('Configuring application...');
-    }
-
-    function appRun() {
-        console.log('Application started...');
-    }
-})();
+function appRun() {
+    console.log('Application started...');
+}
