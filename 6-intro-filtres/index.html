@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TodoManager SPA Angular</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body ng-app="todo.app">
+<div ng-controller="DashboardController">
+    <h1 data-ng-bind="title"></h1>
+
+    <div>
+        <span>Hello {{ userName }} !</span>
+    </div>
+    <div>
+        <span>Hello {{ scopeUserName }} !</span>
+    </div>
+    <div id="todo-container" data-ng-controller="TodoController">
+        <h2>My Todos</h2>
+        <ul>
+            <!-- On crée autant de balises li que de tâches dans notre liste -->
+            <li data-ng-repeat="todo in todoList">{{ '#' + todo.id + ': ' + todo.title}}</li>
+        </ul>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/controllers/controllerModule.js"></script>
+<script src="js/app/controllers/dashboardController.js"></script>
+<script src="js/app/controllers/todoController.js"></script>
+</body>
+</html>
