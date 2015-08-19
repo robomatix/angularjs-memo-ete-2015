@@ -8,7 +8,8 @@
 </head>
 <body ng-app="todo.app">
 <div ng-controller="DashboardController">
-    <h1 ng-bind="title"></h1>
+    <h1 data-ng-bind="title"></h1>
+    <h2>{{ title }}</h2>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 <script src="js/app/app.js"></script>
