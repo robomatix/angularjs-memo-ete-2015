@@ -18,14 +18,25 @@
     </div>
     <div id="todo-container" data-ng-controller="TodoController">
         <h2>My Todos</h2>
+        <div id="filter-container">
+            <h3>Filters ({{ getPriorityName() }})</h3>
+            <button data-ng-click="priorityFilter = { priority: todoPriority.high }">High priority</button>
+            <button data-ng-click="priorityFilter = { priority: todoPriority.medium }">Medium priority</button>
+            <button data-ng-click="priorityFilter = { priority: todoPriority.low }">Low priority</button>
+        </div>
+        <div id="sort-container">
+            <h3>Sorts ({{ sortOrder === 'id' ? 'Ascending' : 'Descending' }})</h3>
+            <button data-ng-click="sortOrder = 'id'">Ascending</button>
+            <button data-ng-click="sortOrder = '-id'">Descending</button>
+        </div>
         <ul>
-            <!-- On crée autant de balises li que de tâches dans notre liste -->
-            <li data-ng-repeat="todo in todoList">{{ '#' + todo.id + ': ' + todo.title}}</li>
+            <li data-ng-repeat="todo in todoList | filter: priorityFilter | orderBy: sortOrder">{{ '#' + todo.id + ': ' + todo.title}}</li>
         </ul>
     </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
 <script src="js/app/app.js"></script>
+<script src="js/app/config/app.config.js"></script>
 <script src="js/app/controllers/controllerModule.js"></script>
 <script src="js/app/controllers/dashboardController.js"></script>
 <script src="js/app/controllers/todoController.js"></script>

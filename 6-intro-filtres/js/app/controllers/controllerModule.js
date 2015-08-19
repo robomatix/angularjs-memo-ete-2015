@@ -3,4 +3,4 @@
  *
  */
 
-angular.module('todo.controllers', []);
+angular.module('todo.controllers', ['todo.config']);
