@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>TodoManager SPA Angular</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body ng-app="todo.app">
+<div ng-controller="DashboardController">
+    <h1 data-ng-bind="title"></h1>
+    <h2>{{ title }}</h2>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="js/app/app.js"></script>
+<script src="js/app/controllers/dashboardController.js"></script>
+</body>
+</html>
