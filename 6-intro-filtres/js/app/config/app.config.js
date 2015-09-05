@@ -8,4 +8,7 @@
         medium: 2,
         high: 3
     });
+
+    module.constant('baseApiUrl', 'http://todolabs.azurewebsites.net');
+
 })();

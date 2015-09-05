@@ -1,20 +1,22 @@
-/*
- * Pas sur que ce soit la meilleure façon d'écrire de fichier, mais ça me plaît !
- * A voir plus tard...
- */
+(function () {
+    'use strict';
 
-angular.module('todo.app', ['todo.controllers']).config(appConfig).run(appRun);
+    var app = angular.module('todo.app', ['todo.controllers']);
 
-function appConfig() {
-    console.log('Configuring application...');
-}
+    app.config(appConfig);
+    app.run(appRun);
 
-function appRun($rootScope) { // Injection du rootScope en paramètre
-    console.log('Application started...');
+    function appConfig() {
+        console.log('Configuring application...');
+    }
 
-    $rootScope.user = {
-        LastName: 'Rebirth',
-        FirstName: 'Robomatix'
-    };
+    function appRun($rootScope) { // Injection du rootScope en paramètre
+        console.log('Application started...');
 
-}
+        $rootScope.user = {
+            LastName: 'Rebirth',
+            FirstName: 'Robomatix'
+        };
+
+    }
+})();

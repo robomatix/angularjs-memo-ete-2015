@@ -15,12 +15,14 @@
 
 // Notez l'absence de deuxième paramètre.
 // Nous ne faisons que récupérer un module existant.
-var controllers = angular.module('todo.controllers');
+(function () {
+    'use strict';
 
-angular.module('todo.controllers')
-    .controller('DashboardController', function ($rootScope, $scope) {
-        $scope.title = 'Dashboard from DashboardController !';
+    var controllers = angular.module('todo.controllers');
+
+    controllers.controller('DashboardController', function ($rootScope, $scope) {
+        $scope.title = 'Dashboard';
         $scope.userName = $rootScope.user.FirstName + ' ' + $rootScope.user.LastName;
         $scope.scopeUserName = $scope.user.FirstName + ' ' + $scope.user.LastName;
-    }
-);
+    });
+})();
